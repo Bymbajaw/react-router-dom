@@ -31,6 +31,10 @@ import {
   PYTHONhome,
   PYTHONintro,
   PYTHONsyntax,
+  BookLayout,
+  BookList,
+  Book,
+  BookNew
 } from "./pages/index";
 
 function App() {
@@ -62,6 +66,11 @@ function App() {
             <li className="nav-item">
               <a className="nav-link" href="/java">
                 JAVA
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/books">
+                BOOK
               </a>
             </li>
           </ul>
@@ -102,6 +111,11 @@ function App() {
           <Route path="getstarted" element={<JAVAgetstarted />} />
           <Route path="syntax" element={<JAVAsyntax />} />
           <Route path="output" element={<JAVAoutput />} />
+        </Route>
+        <Route path="/books" element= {<BookLayout />}>
+          <Route index element = {<BookList />}/>
+          <Route path="/books/:id" element={<Book />}/>
+          <Route path="/books/new" element={<BookNew />}/>
         </Route>
       </Routes>
       <footer>2023</footer>

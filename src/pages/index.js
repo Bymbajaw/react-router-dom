@@ -28,4 +28,7 @@
  export { JSwhereto } from "./JSwhereto";
  export { JSoutput } from "./JSoutput";
  export { JSstatements } from "./JSstatements";
- 
+ export { Book } from "./Book";
+ export { BookList } from "./BookList";
+ export { BookLayout } from "./BookLayout";
+ export { BookNew } from "./BookNew";
